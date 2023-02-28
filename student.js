@@ -64,7 +64,7 @@ router.post("",async(req,res)=>{
             res.send({data:"Enter Valid Input"})
             return
         }
-        const stu=await postStudent({data:"Data Added Successfully"})
+        const stu=await postStudent(data)
         res.send(stu)
     } catch (error) {
         res.status(500).json({data:"Server Error"})
